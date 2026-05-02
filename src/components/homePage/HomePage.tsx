@@ -2,6 +2,8 @@ import React from "react";
 import StatsCard from "./StatsCard";
 import BarChart from "./BarChart";
 import { Zap } from "lucide-react";
+import OverTimeChart from "./OverTimeChart";
+import { RecentOrders } from "./RecentOrders";
 
 export default function HomePage() {
   return (
@@ -52,12 +54,8 @@ export default function HomePage() {
 
       {/* Main Grid Placeholder */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2 h-96 border rounded-xl bg-white p-6 flex items-center justify-center text-zinc-400">
-          Performance Over Time (Chart Placeholder)
-        </div>
-        <div className="h-96 border rounded-xl bg-white p-6 flex items-center justify-center text-zinc-400">
-          Recent Orders (List Placeholder)
-        </div>
+        <OverTimeChart/>
+        <RecentOrders />
       </div>
 
       {/* Secondary Grid Placeholder */}
