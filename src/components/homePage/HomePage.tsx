@@ -6,6 +6,7 @@ import { CircleCheckBig, ShieldCheck, Zap } from "lucide-react";
 import OverTimeChart from "./OverTimeChart";
 import { RecentOrders } from "./RecentOrders";
 import { StatusCard, StatusItem } from "./StatusCard";
+import AssetTable from "./assetTable/index";
 
 export default function HomePage() {
   return (
@@ -119,9 +120,7 @@ export default function HomePage() {
       </div>
 
       {/* Table Placeholder */}
-      <div className="border rounded-xl bg-white p-6 h-96 flex items-center justify-center text-zinc-400">
-        Asset Distribution (Table Placeholder)
-      </div>
+      <AssetTable/>
     </div>
   );
 }
