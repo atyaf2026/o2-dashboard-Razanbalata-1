@@ -1,9 +1,11 @@
+"use client";
 import React from "react";
 import StatsCard from "./StatsCard";
 import BarChart from "./BarChart";
-import { Zap } from "lucide-react";
+import { CircleCheckBig, ShieldCheck, Zap } from "lucide-react";
 import OverTimeChart from "./OverTimeChart";
 import { RecentOrders } from "./RecentOrders";
+import { StatusCard, StatusItem } from "./StatusCard";
 
 export default function HomePage() {
   return (
@@ -59,13 +61,61 @@ export default function HomePage() {
       </div>
 
       {/* Secondary Grid Placeholder */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="h-64 border rounded-xl bg-white p-6 flex items-center justify-center text-zinc-400">
-          System Health Placeholder
-        </div>
-        <div className="h-64 border rounded-xl bg-white p-6 flex items-center justify-center text-zinc-400">
-          Upcoming Tasks Placeholder
-        </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6">
+        {/* System Health الكرت الأول */}
+        <StatusCard
+          title="System Health"
+          subtitle="Real-time status monitor"
+          icon={ShieldCheck}
+          iconBg="bg-indigo-50 text-indigo-600"
+          hasDot
+        >
+          <StatusItem
+            label="Database Engine"
+            badge="Optimal"
+            badgeColor="bg-emerald-50 text-emerald-600"
+          />
+          <StatusItem
+            label="API Gateway"
+            badge="Operational"
+            badgeColor="bg-emerald-50 text-[#16A34A]"
+          />
+          <StatusItem
+            label="Asset Storage"
+            badge="High Load"
+            badgeColor="bg-amber-50 text-amber-600"
+          />
+        </StatusCard>
+
+        <StatusCard
+          title="Upcoming Tasks"
+          subtitle="Deadlines & priorities"
+          icon={CircleCheckBig}
+          iconBg="bg-amber-50 text-amber-600"
+          hasMore
+        >
+          <StatusItem
+            isTask
+            label="Review quarterly projections"
+            sublabel="Due in 2 hours"
+            badge="High"
+            badgeColor="bg-red-50 text-red-600"
+          />
+          <StatusItem
+            isTask
+            label="Sync with marketing team"
+            sublabel="Tomorrow at 10:00 AM"
+            badge="Medium"
+            badgeColor="bg-blue-50 text-blue-600"
+          />
+          <StatusItem
+            isTask
+            label="Update system documentation"
+            sublabel="Friday, Oct 24"
+            badge="Low"
+            badgeColor="bg-zinc-100 text-zinc-500"
+          />
+        </StatusCard>
       </div>
 
       {/* Table Placeholder */}
