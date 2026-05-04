@@ -1,6 +1,7 @@
 import { Bell, Monitor, Shield, User } from 'lucide-react';
 import React from 'react';
 import { ProfileSection } from './ProfileSection';
+import { AppearanceSection } from './AppearanceSection';
 
 function SettingsPage() {
 
@@ -40,7 +41,7 @@ function SettingsPage() {
      {/* Main Content Area */}
       <div className="flex-1 p-2 max-w-5xl mx-auto">
         <ProfileSection />
-        
+        <AppearanceSection/>
       </div>
 
     </div>
