@@ -12,17 +12,19 @@ import {
   House,
 } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export function Sidebar() {
   // نجعل الحالة الافتراضية true ليكون مصغراً في الموبايل والتابلت
   const [isCollapsed, setIsCollapsed] = useState(true);
+  const router = useRouter();
 
   const menuItems = [
-    { name: "Overview", icon: <House  size={20} />, active: true },
-    { name: "Analytics", icon: <BarChart3 size={20} /> },
-    { name: "Users", icon: <Users size={20} /> },
-    { name: "Reports", icon: <FileText size={20} /> },
-    { name: "Settings", icon: <Settings size={20} /> },
+    { name: "Overview", icon: <House  size={20} />, active: true , to: "/"},
+    { name: "Analytics", icon: <BarChart3 size={20} />, to: "/analytics" },
+    { name: "Users", icon: <Users size={20} />, to: "/users" },
+    { name: "Reports", icon: <FileText size={20} />, to: "/reports" },
+    { name: "Settings", icon: <Settings size={20} />, to: "/settings" },
   ];
   
 
@@ -69,6 +71,7 @@ export function Sidebar() {
               }
               ${isCollapsed ? "justify-center" : ""}
             `}
+            onClick={() => router.push(item.to)}
           >
             <div className="flex-shrink-0">{item.icon}</div>
             {!isCollapsed && (
