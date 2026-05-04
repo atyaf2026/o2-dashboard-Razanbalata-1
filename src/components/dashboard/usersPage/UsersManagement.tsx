@@ -1,6 +1,8 @@
 import { Download, Filter } from "lucide-react";
 import { StatCard } from "./StatCard";
 import { UserTable } from "./UserTable";
+import { RolePermissions } from "./RolePermissions";
+import { InviteBanner } from "./InviteBanner";
 
 export default function UsersManagementPage() {
   return (
@@ -34,6 +36,12 @@ export default function UsersManagementPage() {
 
      {/* Main Table */}
       <UserTable />
+
+     {/* Footer Cards */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+        <RolePermissions />
+        <InviteBanner />
+      </div>
 
     </div>
   );
