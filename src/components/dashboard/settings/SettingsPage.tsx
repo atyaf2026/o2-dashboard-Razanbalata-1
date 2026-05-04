@@ -2,6 +2,8 @@ import { Bell, Monitor, Shield, User } from 'lucide-react';
 import React from 'react';
 import { ProfileSection } from './ProfileSection';
 import { AppearanceSection } from './AppearanceSection';
+import { DangerZone } from './DangerZone';
+import { NotificationSummary } from './NotificationCard';
 
 function SettingsPage() {
 
@@ -42,6 +44,8 @@ function SettingsPage() {
       <div className="flex-1 p-2 max-w-5xl mx-auto">
         <ProfileSection />
         <AppearanceSection/>
+        <NotificationSummary />
+        <DangerZone/>
       </div>
 
     </div>
