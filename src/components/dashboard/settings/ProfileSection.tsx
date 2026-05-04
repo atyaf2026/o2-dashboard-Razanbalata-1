@@ -16,7 +16,7 @@ export const ProfileSection = () => (
         <div className="relative group">
           <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-md">
             <Image
-              src="/avatar-placeholder.png"
+              src="/profile.jpg"
               alt="Profile"
               className="w-full h-full object-cover"
               width={50}

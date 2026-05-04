@@ -1,5 +1,6 @@
 import { Bell, Monitor, Shield, User } from 'lucide-react';
 import React from 'react';
+import { ProfileSection } from './ProfileSection';
 
 function SettingsPage() {
 
@@ -25,7 +26,7 @@ function SettingsPage() {
   return (
     <div className="flex bg-[#F8F9FF] min-h-screen">
         {/* Sidebar Navigation */}
-      <div className="w-64 border-r border-zinc-100 p-6 hidden lg:block">
+      <div className="w-64 border-r border-zinc-100 p-2 hidden lg:block">
          <nav className="space-y-2">
             {navItems.map((item) => (
               <button key={item.name} className={`flex w-full text-left p-3 px-4 rounded-xl font-bold text-sm transition-all ${item.name === 'Profile' ? 'bg-white shadow-sm text-indigo-600 border border-zinc-100' : 'text-zinc-400 hover:text-zinc-600'}`}>
@@ -35,6 +36,13 @@ function SettingsPage() {
             ))}
          </nav>
       </div>
+
+     {/* Main Content Area */}
+      <div className="flex-1 p-2 max-w-5xl mx-auto">
+        <ProfileSection />
+        
+      </div>
+
     </div>
   );
 }
