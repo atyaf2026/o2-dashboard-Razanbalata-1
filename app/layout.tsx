@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "Training dashboard for O2",
 };
 
-import { DashboardLayout } from "../components/layout/DashboardLayout"; 
+import { DashboardLayout } from "@/components/layout/DashboardLayout";
 
 export default function RootLayout({
   children,
