@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${openSans.variable} h-full antialiased`}>
-      <body className="min-h-full">
+      <body className="min-h-full bg-[#F8F9FF]">
         <DashboardLayout>{children}</DashboardLayout>
       </body>
     </html>
