@@ -1,5 +1,6 @@
 import { Download, Filter } from "lucide-react";
 import { StatCard } from "./StatCard";
+import { UserTable } from "./UserTable";
 
 export default function UsersManagementPage() {
   return (
@@ -30,6 +31,10 @@ export default function UsersManagementPage() {
         <StatCard label="Pending Invites" value="18" />
         <StatCard label="New Trainees" value="54" />
       </div>
+
+     {/* Main Table */}
+      <UserTable />
+
     </div>
   );
 }
